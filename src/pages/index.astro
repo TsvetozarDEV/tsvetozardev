@@ -178,6 +178,21 @@ import Project from "../components/Project.astro";
                             category="App"
                         />
                     </div>
+                    <div class="row-span-2">
+                        <Project
+                            name="LicenseLatte"
+                            description="Embedded licensing solution for software products. Reduces complexity, enhances security, and simplifies license management. Designed for seamless integration and robust protection against unauthorized use."
+                            stack={[
+                                "Go",
+                                "API",
+                                "SDK",
+                                "Security",
+                                "Cryptography",
+                            ]}
+                            image="/images/licenselatte.png"
+                            category="SDK"
+                        />
+                    </div>
                     <Project
                         name="Billing & Provisioning"
                         description="Custom billing engine and provisioning pipeline that centralizes multiple payment gateways (PSPs) into a unified automated workflow."
@@ -216,8 +231,8 @@ import Project from "../components/Project.astro";
                 <script
                     src="https://assets.calendly.com/assets/external/widget.js"
                     type="text/javascript"
-                    async>
-                </script>
+                    async
+                ></script>
                 <!-- Calendly link widget end -->
                 <button
                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/contact-chechu/30min'});return false;"
