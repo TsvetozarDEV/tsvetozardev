@@ -1,29 +1,33 @@
 {
-    "name": "chechu-pf",
-    "type": "module",
-    "version": "0.0.1",
-    "scripts": {
-        "dev": "astro dev --host",
-        "start": "astro dev",
-        "build": "astro check && astro build",
-        "preview": "astro preview",
-        "astro": "astro",
-        "format": "prettier --write .",
-        "lint": "prettier --check ."
-    },
-    "dependencies": {
-        "@astrojs/check": "^0.9.2",
-        "@astrojs/mdx": "^4.0.8",
-        "@lucide/astro": "^0.577.0",
-        "@tailwindcss/vite": "^4.2.1",
-        "astro": "^5.18.0",
-        "tailwindcss": "^4.2.1",
-        "typescript": "^5.4.3"
-    },
-    "devDependencies": {
-        "@tailwindcss/typography": "^0.5.16",
-        "prettier": "3.8.1",
-        "prettier-plugin-astro": "0.14.1",
-        "prettier-plugin-tailwindcss": "0.7.2"
-    }
+  "name": "chechu-pf",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "npm run build && wrangler dev",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "deploy": "npm run build && wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.2",
+    "@astrojs/cloudflare": "12",
+    "@astrojs/mdx": "^4.0.8",
+    "@lucide/astro": "^0.577.0",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^5.18.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "wrangler": "^4.100.0"
+  }
 }
